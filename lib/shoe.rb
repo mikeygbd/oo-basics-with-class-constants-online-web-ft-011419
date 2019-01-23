@@ -5,14 +5,19 @@ class Shoe
 
   BRANDS = []
 
+  # def initialize(brand)
+  #   @brand = brand
+  #   BRANDS << brand
+  #   if BRANDS.length > 3
+  #     BRANDS.pop
+  #   end
+  # end
   def initialize(brand)
-    @brand = brand
-    BRANDS << brand
-    if BRANDS.length > 3
-      BRANDS.pop
+      @brand = brand
+      if !BRANDS.include?(brand)
+      BRANDS << brand
+      end
     end
-  end
-
 
   def cobble
     self.condition = "new"
